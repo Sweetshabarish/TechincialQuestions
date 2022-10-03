@@ -3,6 +3,21 @@ package questions;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+*2. Write a program to print the repeating substring of minimum length 2 in a given sentence.
+
+Examples:
+
+Input: However Everyday is a Day.
+Output: ever, day
+
+Note: Not case sensitive. Substrings need to be identified irrespetive of upper case or 
+lower case.
+
+Input: Happy Holi!
+Output: none
+*
+*/
 public class Findingsubsting {
 	
 
