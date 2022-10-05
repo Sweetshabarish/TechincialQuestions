@@ -7,7 +7,7 @@ public class Traps
 	/*
 	 * checking first two condition
 	 */
-	static boolean check12(int x,int y) {
+	static boolean checkingfirstandsecondcondition(int x,int y) {
 		if(x==y) {
 			//System.out.println(x);
 			return true;
@@ -23,12 +23,12 @@ public class Traps
 	}
 		
 	
-	static void  check(int n1,int n2,int y) {
+	static void  trapchecking(int n1,int n2,int y) {
 		boolean flag = false;
 		for(int x=n1;x<=n2;x++) {
 //			System.out.println(x+" "+y);
-			if(check12(x,y)==false) {
-				if(check3(x,y)==false) {
+			if(checkingfirstandsecondcondition(x,y)==false) {
+				if(checkingthirdcondition(x,y)==false) {
 					y=y-1;
 				}else {
 					y=y+2;
@@ -52,17 +52,17 @@ public class Traps
 	/*
 	 *  checking last condition
 	 */
-		static boolean check3(int x,int y) {
+		static boolean checkingthirdcondition(int x,int y) {    
 		      while(true) {
 //		    	  System.out.println(x+" "+y);
-		    	  	if(check12(x,y)==true) {
+		    	  	if(checkingfirstandsecondcondition(x,y)==true) {
 		    			 return true;
 		    		}
 		    	  	else if(x<10)
 		    	  		break;
 		    		 
 	    	  else {
-	    		  x=findSum(x);
+	    		  x=sumofdigit(x);
 	    	  }
 		    		 
 		      }
@@ -76,7 +76,7 @@ public class Traps
 /*
  * finding sum of the digit
  */
-	static int findSum(int number)  
+	static int sumofdigit(int number)  
 	{  
 	      
 	int sum;      
@@ -86,21 +86,7 @@ public class Traps
 	return sum;  
 	}  
 	
-	/*
-	 * finding length of the integer
-	 */
-	public static int countDig(int n)  
-	{  
-	int count = 0;  
-	while(n != 0)  
-	{  
 	
-	n = n / 10;  
-	
-	count = count + 1;  
-	}  
-	return count;  
-	}
 	/*
 	 * main method
 	 */
@@ -109,7 +95,7 @@ public class Traps
 	int n1=inputreader.nextInt();
 	int n2=inputreader.nextInt();
 	int y=inputreader.nextInt();
-	check(n1,n2,y);
+	trapchecking(n1,n2,y);
 	}
 
 }  
